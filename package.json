@@ -1,0 +1,43 @@
+{
+  "name": "@amlplugins/amazon-lambda",
+  "version": "0.0.1",
+  "description": "Native @aws-sdk/client-lambda SDK re-exported under the @amlplugins namespace — AWS Lambda — function CRUD, invocation, layers, aliases, event-source mappings, function URLs.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@aws-sdk/client-lambda": "^3.700.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amlplugins/amazon-lambda.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}
